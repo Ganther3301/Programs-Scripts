@@ -14,11 +14,11 @@ time.sleep(6)
 #--------------- Edit Here -------------------------------------------------------------
 
 # Enter your account details here 
-username = 'hithesh2k2@gmail.com'
-password = 'kumar@ns321'
+username = 'Enter username here	'
+password = 'Enter password here'
 
 # Copy the URL of channel where you wanna send messages and paste below
-channelURL = "https://discord.com/channels/760880935557398608/792313155534848011"
+channelURL = ""
 
 #-------------- Edit End ----------------------------------------------------------------
 
@@ -40,10 +40,6 @@ driver.get(channelURL)
 print(">Opening The Server Link...")
 time.sleep(5)
 
-
-#number of time you wanna change
-i = 0
-
 # Msg Sending
 
 while(True):
@@ -51,7 +47,7 @@ while(True):
 	msg_input = driver.find_element_by_xpath('//*[@id="app-mount"]/div[2]/div/div[2]/div/div/div/div[2]/div[2]/div/main/form/div/div/div/div/div[3]/div[2]/div') 
 	msg_input.click()
 	actions = ActionChains(driver)
-	actions.send_keys("Just wanna evolve my pignite")
+	actions.send_keys("Enter the message")
 	actions.send_keys(Keys.ENTER) 
 	actions.perform()
 	i += 1 
