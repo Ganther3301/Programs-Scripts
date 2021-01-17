@@ -41,7 +41,7 @@ print(">Opening The Server Link...")
 time.sleep(5)
 
 # Msg Sending
-
+i = 0
 while(True):
 	time.sleep(1)
 	msg_input = driver.find_element_by_xpath('//*[@id="app-mount"]/div[2]/div/div[2]/div/div/div/div[2]/div[2]/div/main/form/div/div/div/div/div[3]/div[2]/div') 
