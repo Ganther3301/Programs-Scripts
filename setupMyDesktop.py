@@ -1,28 +1,41 @@
 import subprocess
 
-debianCommands = [
-    "sudo apt install polybar",
-    "sudo apt install i3-wm",
-    "sudo apt install neovim",
-    "sudo apt install firefox",
-    "sudo apt install nitrogen",
-    "sudo apt install rofi",
-    "sudo apt install pcmanfm"
+apps = [
+    " polybar",
+    " i3-wm",
+    " neovim",
+    " firefox",
+    " nitrogen",
+    " rofi",
+    " pcmanfm"
     
 ]
 
 gitCommands = [
-    "git clone --recursive https://github.com/thestinger/termite.git",
-    "cd termite && make && cd",
+    # For termite
+    "git clone --recursive https://github.com/thestinger/termite.git ~",
+    "cd ~/termite && make && cd",
+    # For vim-plug
     "curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim",
-    "git clone https://github.com/Ganther3301/config.git",
-    "cd config",
+    # For downloading and placing my config files
+    "git clone https://github.com/Ganther3301/config.git ~",
+    "cd ~/config",
     "cp -r i3 i3blocks nvim polybar qtile termite ~/.config"
 ]
-
-for i in debianCommands:
-    subprocess.run(i, shell=True)
+invalid = True
+while invalid:
+    pkg = input("Which operating system, Debian or Arch?[d/a]")
+    if pkg == "d" or pkg == "D":
+        invalid = False
+        for i in apps:
+            subprocess.run("sudo apt-get install "+i, shell=True)
+    elif pkg == "a" or pkg == "A":
+        invalid = False
+        for i in apps:
+            subprocess.run("sudo pacman -S "+i, shell=True)
+    else:
+        print("Enter valid option")
 
 for i in gitCommands:
     subprocess.run(i, shell=True)
