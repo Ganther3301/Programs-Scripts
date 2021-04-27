@@ -11,13 +11,15 @@ apps = [
     "nnn",
     "zsh",
     "powerline",
+    "pfetch",
+    "neofetch",
     
 ]
 
 gitCommands = [
     # For termite
-    "git clone --recursive https://github.com/thestinger/termite.git ~",
-    "cd ~/termite && make && cd",
+    #"git clone --recursive https://github.com/thestinger/termite.git ~",
+    #"cd ~/termite && make && cd",
     # For vim-plug
     "curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim",
