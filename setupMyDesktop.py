@@ -7,7 +7,10 @@ apps = [
     " firefox",
     " nitrogen",
     " rofi",
-    " pcmanfm"
+    " pcmanfm",
+    "nnn",
+    "zsh",
+    "powerline",
     
 ]
 
@@ -21,7 +24,16 @@ gitCommands = [
     # For downloading and placing my config files
     "git clone https://github.com/Ganther3301/config.git ~",
     "cd ~/config",
-    "cp -r i3 i3blocks nvim polybar qtile termite ~/.config"
+    "cp -r i3 i3blocks nvim polybar qtile termite ~/.config",
+    # Setting up zsh
+    "curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh",
+    'mkdir -p "$HOME/.zsh"',
+    'git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"',
+    'git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1',
+    'ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"',
+    'sudo git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions',
+    'sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting',
+    'cp ~/config/.zshrc ~',
 ]
 invalid = True
 while invalid:
