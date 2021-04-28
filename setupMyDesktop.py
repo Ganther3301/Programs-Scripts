@@ -20,6 +20,8 @@ gitCommands = [
     # For termite
     #"git clone --recursive https://github.com/thestinger/termite.git ~",
     #"cd ~/termite && make && cd",
+    # Installing JetBrains Mono
+    '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"'
     # For vim-plug
     "curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim",
@@ -36,6 +38,9 @@ gitCommands = [
     'sudo git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions',
     'sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting',
     'cp ~/config/.zshrc ~',
+    # Installing my st
+    'git clone https://github.com/Ganther3301/st.git ~',
+    'cd ~/st && rm -rf config.h && sudo make clean install'
 ]
 invalid = True
 while invalid:
