@@ -13,7 +13,7 @@ apps = [
     "powerline",
     "pfetch",
     "neofetch",
-    
+    "alacritty",   
 ]
 
 gitCommands = [
@@ -28,16 +28,16 @@ gitCommands = [
     # For downloading and placing my config files
     "git clone https://github.com/Ganther3301/config.git ~",
     "cd ~/config",
-    "cp -r i3 i3blocks nvim polybar qtile termite ~/.config",
+    "cp -r i3 i3blocks nvim polybar alacritty qtile termite ~/.config",
     # Setting up zsh
-    "curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh",
-    'mkdir -p "$HOME/.zsh"',
-    'git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"',
-    'git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1',
-    'ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"',
-    'sudo git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions',
-    'sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting',
-    'cp ~/config/.zshrc ~',
+#    "curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh",
+#    'mkdir -p "$HOME/.zsh"',
+#    'git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"',
+#    'git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1',
+#    'ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"',
+#    'sudo git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions',
+#    'sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting',
+#    'cp ~/config/.zshrc ~',
     # Installing my st
     'git clone https://github.com/Ganther3301/st.git ~',
     'cd ~/st && rm -rf config.h && sudo make clean install'
