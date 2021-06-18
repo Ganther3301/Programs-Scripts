@@ -52,7 +52,7 @@ while invalid:
     elif pkg == "a" or pkg == "A":
         invalid = False
         for i in apps:
-            subprocess.run("sudo pacman -S "+i, shell=True)
+            subprocess.run("sudo pacman -S "+i+" --noconfirm", shell=True)
     else:
         print("Enter valid option")
 
